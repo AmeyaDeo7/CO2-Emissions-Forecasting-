@@ -4,5 +4,5 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px 
 
-data = pd.read_csv("temperature-anomaly.csv")
+data = pd.read_csv("dataSets/temperature-anomaly.csv")
 print(data)
