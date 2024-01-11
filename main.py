@@ -26,10 +26,18 @@ print(dataTwo.head)
 # figureTwo = px.line(dataTwo, x="Year", y="Annual CO₂ emissions (per capita)", title="Global C02 Emissions")
 # figureTwo.show()
 
-figureTwo = px.bar(dataTwo, x="Entity", y="Annual CO₂ emissions (per capita)", title="Average C02 Emissions Per Capita")
+# figureTwo = px.bar(dataTwo, x="Entity", y="Annual CO₂ emissions (per capita)", title="Average C02 Emissions Per Capita")
+# figureTwo.show()
+
+figureTwo = px.scatter(data_frame= dataTwo, x='Year', y='Annual CO₂ emissions (per capita)', size='Annual CO₂ emissions (per capita)', trendline= 'ols',
+                       title="Relationship between country and Annual CO2 Emissions")
 figureTwo.show()
 
 
+## Analyzing the change in CO2 Emissions:
+dataTwo["year"] = dataTwo['date'].dt.year
+
+print(dataTwo.head)
 
 
 
